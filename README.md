@@ -5,7 +5,7 @@
 
 **The unofficial tool for McGill students to search, organize, and export their exam schedule.**
 
-[Live App](https://mcgill-exam-planner.netlify.app) · [Official McGill Exams Page](https://www.mcgill.ca/exams/)
+[Live App]([https://mcgill-exam-planner.netlify.app](https://mcgill-exam-planner-355080867829.us-west1.run.app/)) · [Official McGill Exams Page](https://www.mcgill.ca/exams/)
 
 </div>
 
