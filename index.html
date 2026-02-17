@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTWXNH5DLD"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-TTWXNH5DLD');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary SEO -->
+    <title>McGill Exam Planner - Schedule Generator & Calendar Export</title>
+    <meta name="title" content="McGill Exam Planner - Schedule Generator & Calendar Export" />
+    <meta name="description" content="The unofficial McGill Exam Planner. Search courses, check for exam conflicts, and export your Winter 2026 exam schedule directly to Google Calendar, Outlook, or Apple Calendar." />
+    <meta name="keywords" content="McGill, Exam Planner, McGill Schedule, Exam Schedule, McGill University, Calendar Export, Conflict Checker, Winter 2026 Exams" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="author" content="McGill Exam Planner" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mcgill-exam-planner.netlify.app/" />
+    <meta property="og:title" content="McGill Exam Planner - Schedule Generator & Calendar Export" />
+    <meta property="og:description" content="Build your perfect exam schedule. Check for conflicts, avoid 24h hardships, and export directly to your calendar app." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1200&auto=format&fit=crop" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="McGill Exam Planner - Schedule Generator & Calendar Export" />
+    <meta property="twitter:description" content="Build your perfect exam schedule. Check for conflicts, avoid 24h hardships, and export directly to your calendar app." />
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1200&auto=format&fit=crop" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "McGill Exam Planner",
+      "description": "A tool for McGill University students to plan exam schedules, check for conflicts, and export to calendars.",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "CAD"
+      }
+    }
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Libre+Baskerville:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+              serif: ['"Libre Baskerville"', 'serif'],
+              mono: ['"IBM Plex Mono"', 'monospace'],
+            },
+            colors: {
+              background: 'var(--background)',
+              foreground: 'var(--foreground)',
+              card: 'var(--card)',
+              'card-foreground': 'var(--card-foreground)',
+              popover: 'var(--popover)',
+              'popover-foreground': 'var(--popover-foreground)',
+              muted: 'var(--muted)',
+              'muted-foreground': 'var(--muted-foreground)',
+              border: 'var(--border)',
+              input: 'var(--input)',
+              ring: 'var(--ring)',
+              mcgill: {
+                DEFAULT: 'oklch(0.4650 0.1470 24.9381)', // Deep Red
+                hover: 'oklch(0.40 0.14 24.9)', 
+              },
+            },
+            boxShadow: {
+              'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+              'sharp': '4px 4px 0px 0px var(--border)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        /* Light Mode */
+        --background: oklch(0.9779 0.0042 56.3756);
+        --foreground: oklch(0.14 0.005 285);
+        --card: oklch(1 0 0);
+        --card-foreground: oklch(0.14 0.005 285);
+        --popover: oklch(1 0 0);
+        --popover-foreground: oklch(0.14 0.005 285);
+        --muted: oklch(0.96 0.01 285);
+        --muted-foreground: oklch(0.55 0.02 285);
+        --border: oklch(0.92 0.01 285);
+        --input: oklch(0.92 0.01 285);
+        --ring: oklch(0.4650 0.1470 24.9381);
+      }
+      
+      .dark {
+        /* Dark Mode */
+        --background: oklch(0.14 0.01 260);
+        --foreground: oklch(0.98 0 0);
+        --card: oklch(0.17 0.01 260);
+        --card-foreground: oklch(0.98 0 0);
+        --popover: oklch(0.17 0.01 260);
+        --popover-foreground: oklch(0.98 0 0);
+        --muted: oklch(0.22 0.02 260);
+        --muted-foreground: oklch(0.70 0.02 260);
+        --border: oklch(0.25 0.02 260);
+        --input: oklch(0.25 0.02 260);
+        --ring: oklch(0.4650 0.1470 24.9381);
+      }
+
+      body {
+        background-color: var(--background);
+        color: var(--foreground);
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--muted-foreground); 
+        border-radius: 4px;
+        opacity: 0.5;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--foreground); 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.39.0",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@^2.49.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
